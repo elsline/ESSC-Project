@@ -351,6 +351,8 @@ ScrollOut({
 
 let megaIcon = document.querySelector(".mega-icon");
 let megaMenu = document.querySelector(".mega-menu");
+let closeIcon = document.querySelector(".close-icon");
+const content = document.querySelector(".content");
 
 megaIcon.addEventListener("click", function (e) {
   e.stopPropagation();
@@ -362,13 +364,17 @@ megaIcon.addEventListener("click", function (e) {
       : "brightness(0.5)";
 });
 
-document.addEventListener("click", function () {
+content.addEventListener("click", function () {
+  megaMenu.classList.remove("active");
+  const content = document.querySelector(".content");
+  content.style.filter = "brightness(1)";
+});
+closeIcon.addEventListener("click", function () {
   megaMenu.classList.remove("active");
   const content = document.querySelector(".content");
   content.style.filter = "brightness(1)";
 });
 //
-
 
 // create a function that make All fade animation
 
