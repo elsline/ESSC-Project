@@ -10,6 +10,16 @@
   -ms-transform: translateY(30px);
   -o-transform: translateY(30px);
 }
+.fade-up-mouse {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUpAnimation 1s 2.5s forwards;
+  -webkit-animation: fadeUpAnimation 1s 2.5s forwards;
+  -webkit-transform: translateY(40px);
+  -moz-transform: translateY(40px);
+  -ms-transform: translateY(40px);
+  -o-transform: translateY(40px);
+}
 
 
 @keyframes fadeUpAnimation {

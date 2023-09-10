@@ -79,9 +79,11 @@
 
 /* Style your main content (initially hidden) */
 .content {
-  opacity: 0; /* Initially fully transparent */
+  opacity: 1; /* Initially fully transparent */
   transition: opacity 0.5s ease-in-out; /* Add a transition for smooth fade */
+  background: #333; /* Background color while loading and fading out */
 }
+
 /* Page Loading Animation  */
 
 body {
@@ -257,7 +259,6 @@ header .logo-blue {
   -moz-transform: translateY(-1.5px);
   -ms-transform: translateY(-1.5px);
   -o-transform: translateY(-1.5px);
-
   transition: 0.3s;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -525,7 +526,7 @@ header .contact-btn[data-scroll="out"]:hover {
   header nav ul {
     display: none;
   }
-  .mouse{
+  .mouse {
     margin-top: 56px;
   }
   .landing .container h1 {
@@ -565,7 +566,5 @@ header .contact-btn[data-scroll="out"]:hover {
     -o-transform: translateY(-50%);
   }
 }
-
-
 
 /* End  Responsive Design section */
