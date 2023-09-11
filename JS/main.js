@@ -357,22 +357,13 @@ const content = document.querySelector(".content");
 megaIcon.addEventListener("click", function (e) {
   e.stopPropagation();
   megaMenu.classList.toggle("active");
-  const content = document.querySelector(".content");
-  content.style.filter =
-    content.style.filter === "brightness(0.5)"
-      ? "brightness(1)"
-      : "brightness(0.5)";
 });
 
 content.addEventListener("click", function () {
   megaMenu.classList.remove("active");
-  const content = document.querySelector(".content");
-  content.style.filter = "brightness(1)";
 });
 closeIcon.addEventListener("click", function () {
   megaMenu.classList.remove("active");
-  const content = document.querySelector(".content");
-  content.style.filter = "brightness(1)";
 });
 //
 
@@ -404,6 +395,36 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const fadeInElements = document.querySelectorAll(".fade-in");
 });
+
+//make function to counter the progress
+
+let nums = document.querySelectorAll(".progress-counter .prog .num");
+let section = document.querySelector(".about");
+let started = false;
+
+window.onscroll = function () {
+  if (window.scrollY >= section.offsetLeft) {
+    if (!started) {
+      nums.forEach((num) => starCount(num));
+    }
+    started = true;
+  }
+};
+
+function starCount(el) {
+  let goal = el.dataset.goal;
+  let count = setInterval(() => {
+    el.textContent++;
+    if (el.textContent == goal) {
+      clearInterval(count);
+    }
+  }, 2500 / goal);
+}
+// starCount(document.querySelectorAll(".progress-counter .prog .num")[0]);
+
+//make function to counter the progress
+
+// mouse function
 
 // change the background when hover
 
@@ -441,3 +462,11 @@ document.addEventListener("DOMContentLoaded", function () {
 // });
 
 ///
+
+//
+
+// let links = document.querySelectorAll(".links .link");
+
+// links.forEach.addEventListener("click,", (link) => {
+//   document.style.cssText = "opacity: 0;";
+// });
