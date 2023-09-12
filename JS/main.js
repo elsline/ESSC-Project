@@ -1,29 +1,29 @@
 // page Load Animation
 
 // Wait for the page to load
-window.addEventListener("load", function () {
-  // Get the page loader and content elements
-  const pageLoader = document.querySelector(".page-loader");
-  const content = document.querySelector(".content");
+// window.addEventListener("load", function () {
+//   // Get the page loader and content elements
+//   const pageLoader = document.querySelector(".page-loader");
+//   const content = document.querySelector(".content");
 
-  // Fade out the loader
-  setTimeout(function () {
-    pageLoader.style.opacity = "0";
-  }, 1500); // Adjust the duration as needed
+//   // Fade out the loader
+//   setTimeout(function () {
+//     pageLoader.style.opacity = "0";
+//   }, 1500); // Adjust the duration as needed
 
-  // Hide the loader and fade in the content
-  setTimeout(function () {
-    pageLoader.style.display = "none";
-    content.style.opacity = "1";
-  }, 2000); // Adjust the duration as needed
-});
+//   // Hide the loader and fade in the content
+//   setTimeout(function () {
+//     pageLoader.style.display = "none";
+//     content.style.opacity = "1";
+//   }, 2000); // Adjust the duration as needed
+// });
 
-// Handle fading out with background color when navigating away (e.g., clicking a link)
-window.addEventListener("beforeunload", function () {
-  const pageLoader = document.querySelector(".page-loader");
-  pageLoader.style.display = "block"; // Show loader
-  pageLoader.style.opacity = "1"; // Make it fully visible
-});
+// // Handle fading out with background color when navigating away (e.g., clicking a link)
+// window.addEventListener("beforeunload", function () {
+//   const pageLoader = document.querySelector(".page-loader");
+//   pageLoader.style.display = "block"; // Show loader
+//   pageLoader.style.opacity = "1"; // Make it fully visible
+// });
 
 // page Load Animation
 
