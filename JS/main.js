@@ -411,6 +411,16 @@ window.onscroll = function () {
   }
 };
 
+// function starCount(el) {
+//   let goal = el.dataset.goal;
+//   let count = setInterval(() => {
+//     el.textContent++;
+//     if (el.textContent == goal) {
+//       clearInterval(count);
+//     }
+//   }, 2500 / goal);
+// }
+
 function starCount(el) {
   let goal = el.dataset.goal;
   let count = setInterval(() => {
@@ -418,8 +428,24 @@ function starCount(el) {
     if (el.textContent == goal) {
       clearInterval(count);
     }
-  }, 2500 / goal);
+    if (goal !== "1996") {
+      el.textContent = "+" + el.textContent; // Add a plus sign before the number
+    }
+  }, 5000 / goal);
 }
+
+// function starCount(el) {
+//   let goal = el.dataset.goal;
+//   if (goal !== "1996") {
+//     el.textContent = "+" + el.textContent; // Add a plus sign before the number
+//   }
+//   let count = setInterval(() => {
+//     el.textContent++;
+//     if (el.textContent == goal) {
+//       clearInterval(count);
+//     }
+//   }, 2500 / goal);
+// }
 // starCount(document.querySelectorAll(".progress-counter .prog .num")[0]);
 
 //make function to counter the progress
@@ -470,3 +496,33 @@ function starCount(el) {
 // links.forEach.addEventListener("click,", (link) => {
 //   document.style.cssText = "opacity: 0;";
 // });
+
+// Swiper
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  breakpoints: {
+    0: { slidesPerView: 1 },
+    520: { slidesPerView: 2 },
+    950: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+//
+let getStartedLink = document.querySelector(".getStarted .link-btn");
+let getStartedSpan = document.querySelector(".getStarted span");
+let getStartedP = document.querySelector(".getStarted .fast");
+
+getStartedLink.addEventListener("mouseover", function () {
+  getStartedP.classList.add("active");
+});
+getStartedLink.addEventListener("mouseout", function () {
+  getStartedP.classList.remove("active");
+});
