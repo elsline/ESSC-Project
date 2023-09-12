@@ -526,3 +526,4 @@ getStartedLink.addEventListener("mouseover", function () {
 getStartedLink.addEventListener("mouseout", function () {
   getStartedP.classList.remove("active");
 });
+
